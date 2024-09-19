@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <Box>
         <Typography>
-          Login
+          Login.
         </Typography>
     </Box>
   );

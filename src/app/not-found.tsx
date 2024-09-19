@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <Box>
         <Typography>
-        Page Not Found Bruda
+          Page Not Found Bruda
         </Typography>
     </Box>
   );

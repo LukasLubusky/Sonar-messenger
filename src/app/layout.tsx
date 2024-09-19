@@ -1,7 +1,20 @@
-// src/app/(login)/layout.tsx
+// src/app/layout.tsx
 
-export const metadata = { title: "Login | Sonar" };
 
-export default function LoginLayout({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+
+import { ReactNode } from 'react';
+
+export const metadata = {
+  title: "Sonar",
+  description: "Welcome to Sonar",
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <body style={{ backgroundColor: "#7209b7", margin: 0 }}>
+        {children}
+      </body>
+    </html>
+  );
 }

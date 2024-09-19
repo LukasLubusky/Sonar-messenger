@@ -3,15 +3,15 @@
 
 
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 
 export default function NotFound() {
   return (
-    <Box>
+    <Container>
         <Typography>
           Page Not Found Bruda
         </Typography>
-    </Box>
+    </Container>
   );
 }

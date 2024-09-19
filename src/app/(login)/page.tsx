@@ -5,6 +5,7 @@
 "use client";
 
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
@@ -15,11 +16,14 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 
-
 export default function Login() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Handle opening and closing the form
+  useEffect(() => {
+    setIsMounted(true); 
+  }, []);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -27,6 +31,8 @@ export default function Login() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  if (!isMounted) return null;
 
   return (
     <Container
@@ -38,7 +44,7 @@ export default function Login() {
         backgroundImage: "url('src/app/public/sonar_logo_transparent.png')",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center"
+        backgroundPosition: "center",
       }}
     >
       <Stack spacing={2} direction="row">
@@ -50,9 +56,7 @@ export default function Login() {
 
       {/* Dialog Form for Request Access */}
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>
-          Request Access
-        </DialogTitle>
+        <DialogTitle>Request Access</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Please enter your email to request access.

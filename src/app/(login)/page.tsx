@@ -15,6 +15,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography'; // Added Typography import
 
 export default function Login() {
   const [open, setOpen] = useState(false);
@@ -52,11 +53,11 @@ export default function Login() {
       <div
         className="logincontainer"
         style={{
-          height: "auto",
-          width: "75vh",
+          height: "60vh",
+          width: "90vh",
           backgroundColor: "#470673",
           borderRadius: "5rem",
-          boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.25)",
+          boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.3)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -64,13 +65,40 @@ export default function Login() {
           padding: "20px",
         }}
       >
+        {/* Logo Section */}
+        <img 
+          src="/Logo.png" 
+          alt="Logo" 
+          style={{ 
+            width: "25vh", 
+            height: "auto", 
+            marginBottom: "10px" 
+          }} 
+        />
+        
+        {/* Text under logo */}
+        <Typography
+          variant="h5"
+          align="center"
+          sx={{ color: "white", marginBottom: "20px" }}
+        >
+          Sonar
+        </Typography>
+        <Typography
+          variant="h6"
+          align="center"
+          sx={{ color: "white", marginBottom: "20px" }}
+        >
+          Message your friends securely
+        </Typography>
+
         <Stack spacing={2} direction="column" alignItems="center">
           <div
             style={{
-              width: "100%", // Full width
-              boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.25)", // Same shadow as buttons
-              borderRadius: "8px", // Optional: Rounded corners
-              overflow: "hidden", // To contain the input styles
+              width: "100%",
+              boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.25)",
+              borderRadius: "8px",
+              overflow: "hidden",
             }}
           >
             <TextField
@@ -81,31 +109,36 @@ export default function Login() {
               fullWidth
               InputProps={{
                 sx: {
-                  bgcolor: "#1976d2", // Blue background color
-                  color: "white", // Text color
-                  height: "40px", // Set the height for the input
+                  bgcolor: "#1976d2",
+                  color: "white",
+                  height: "40px",
                   "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#1976d2", // Border color
+                    borderColor: "#1976d2",
                   },
                   "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#1976d2", // Border color on hover
+                    borderColor: "#1976d2",
                   },
                   "& .MuiInputBase-input": {
-                    color: "white", // Input text color
+                    color: "white",
                     display: "flex",
-                    alignItems: "center", // Center vertically
-                    padding: "0 14px", // Horizontal padding
+                    alignItems: "center",
+                    padding: "0 14px",
                   },
+                },
+              }}
+              InputLabelProps={{
+                sx: {
+                  color: "white",
                 },
               }}
             />
           </div>
           <div
             style={{
-              width: "100%", // Full width
-              boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.25)", // Same shadow as buttons
-              borderRadius: "8px", // Optional: Rounded corners
-              overflow: "hidden", // To contain the input styles
+              width: "100%",
+              boxShadow: "20px 20px 15px -3px rgba(0,0,0,0.25)",
+              borderRadius: "8px",
+              overflow: "hidden",
             }}
           >
             <TextField
@@ -117,21 +150,26 @@ export default function Login() {
               fullWidth
               InputProps={{
                 sx: {
-                  bgcolor: "#1976d2", // Blue background color
-                  color: "white", // Text color
-                  height: "40px", // Set the height for the input
+                  bgcolor: "#1976d2",
+                  color: "white",
+                  height: "40px",
                   "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#1976d2", // Border color
+                    borderColor: "#1976d2",
                   },
                   "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#1976d2", // Border color on hover
+                    borderColor: "#1976d2",
                   },
                   "& .MuiInputBase-input": {
-                    color: "white", // Input text color
+                    color: "white",
                     display: "flex",
-                    alignItems: "center", // Center vertically
-                    padding: "0 14px", // Horizontal padding
+                    alignItems: "center",
+                    padding: "0 14px",
                   },
+                },
+              }}
+              InputLabelProps={{
+                sx: {
+                  color: "white",
                 },
               }}
             />

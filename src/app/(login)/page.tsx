@@ -78,7 +78,7 @@ export default function Login() {
         
         {/* Text under logo */}
         <Typography
-          variant="h5"
+          variant="h4"
           align="center"
           sx={{ color: "white", marginBottom: "20px" }}
         >

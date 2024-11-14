@@ -1,4 +1,4 @@
-// src/app/(login)/not-found.tsx
+// src/app/(login)/page.tsx
 
 
 
